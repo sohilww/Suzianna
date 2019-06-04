@@ -9,6 +9,7 @@ using ServiceLocator = Suzianna.Core.ServiceLocator;
 
 namespace Suzianna.DatabaseSandbox
 {
+    [Binding]
     public class SandBoxHook
     {
         
