@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DatbaseSandboxer" Version="1.0.0" />
+    <PackageReference Include="SpecFlow" Version="3.0.213" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Suzianna.Core\Suzianna.Core.csproj" />
+  </ItemGroup>
+
+</Project>

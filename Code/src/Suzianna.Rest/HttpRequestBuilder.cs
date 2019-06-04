@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Suzianna.Core;
 using Suzianna.Core.Utilities;
 using Suzianna.Rest.Serialization;
 
@@ -96,6 +97,9 @@ namespace Suzianna.Rest
                 httpRequest.Content = MakeContent();
                 httpRequest.Content.Headers.ContentType = new MediaTypeHeaderValue(this._contentType.ToMediaType());
             }
+
+            httpRequest.ProcessInterceptor();
+            
             return AddHeadersToRequestHeaders(httpRequest);
         }
         private bool HasContent()
@@ -119,6 +123,11 @@ namespace Suzianna.Rest
                 request.Content?.Headers.TryAddWithoutValidation(header.Key, header.Value);
             }
             return request;
+        }
+
+        public void WithInterceptor()
+        {
+            
         }
     }
 }
