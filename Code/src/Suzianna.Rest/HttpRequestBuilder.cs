@@ -124,10 +124,5 @@ namespace Suzianna.Rest
             }
             return request;
         }
-
-        public void WithInterceptor()
-        {
-            
-        }
     }
 }
